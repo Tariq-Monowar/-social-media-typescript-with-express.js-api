@@ -146,19 +146,6 @@ export const verifyOTP = async (req: Request, res: Response): Promise<void> => {
     const { otp } = req.body;
     console.log(req.session.otp, req.session.userData);
 
-    // Check if userData exists and has required fields
-    if (
-      !req.session.userData ||
-      !req.session.userData.userName ||
-      !req.session.userData.email ||
-      !req.session.userData.password
-    ) {
-      res.status(400).json({
-        message: "User data is incomplete",
-      });
-      return;
-    }
-
     if (otp !== req.session.otp) {
       res.status(400).json({
         message: "Invalid OTP",
