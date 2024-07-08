@@ -1,6 +1,5 @@
 # social media express.js api with typescript
 This repository contains the backend code for a social media platform built with Express.js. The backend provides APIs for user management, posts, friendships, comments, infinite comment replies with media, logical reactions (like, love, care, etc.), notifications, and more
-
 #### User Routes
 - `POST /users/register` - Register a new user
 - `POST /users/verify-otp` - Verify OTP for registration
@@ -42,7 +41,6 @@ This repository contains the backend code for a social media platform built with
 - `DELETE /notification/delete/:id` - Delete a notification by ID (requires authentication)
 
 ## Installation
-
 1. Clone the repository:
    ```bash
    git clo
