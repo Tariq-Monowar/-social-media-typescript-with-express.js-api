@@ -40,3 +40,44 @@ This repository contains the backend code for a social media platform built with
 #### Notification Routes
 - `GET /notification` - Get all notifications (requires authentication)
 - `DELETE /notification/delete/:id` - Delete a notification by ID (requires authentication)
+
+# Folder Structure
+├── config/
+│   ├── cloudinary.config.ts
+│   ├── db.ts
+│   └── config.ts
+├── constants/
+│   ├── email_message.ts
+│   └── interface.ts
+├── controllers/
+│   ├── comment.controllers.ts
+│   ├── friends.controllers.ts
+│   ├── notification.controllers.ts
+│   ├── posts.controllers.ts
+│   └── users.controllers.ts
+├── middleware/
+│   └── verifyUser.ts
+├── models/
+│   ├── comment.models.ts
+│   ├── friend.models.ts
+│   ├── notification.models.ts
+│   ├── post.models.ts
+│   └── user.models.ts
+├── routes/
+│   ├── comment.routes.ts
+│   ├── friend.routes.ts
+│   ├── notification.routes.ts
+│   ├── post.routes.ts
+│   └── user.routes.ts
+├── util/
+│   ├── baseUrl.ts
+│   └── fireUploade.ts
+├── .env
+├── .gitignore
+├── README.md
+├── app.ts
+├── index.ts
+├── package-lock.json
+├── package.json
+├── tsconfig.json
+
