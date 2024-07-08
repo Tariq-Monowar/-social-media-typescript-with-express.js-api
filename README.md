@@ -42,6 +42,7 @@ This repository contains the backend code for a social media platform built with
 - `DELETE /notification/delete/:id` - Delete a notification by ID (requires authentication)
 
 # Folder Structure
+```
 ├── config/
 │   ├── cloudinary.config.ts
 │   ├── db.ts
@@ -80,4 +81,4 @@ This repository contains the backend code for a social media platform built with
 ├── package-lock.json
 ├── package.json
 ├── tsconfig.json
-
+```
