@@ -41,6 +41,28 @@ This repository contains the backend code for a social media platform built with
 - `GET /notification` - Get all notifications (requires authentication)
 - `DELETE /notification/delete/:id` - Delete a notification by ID (requires authentication)
 
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clo
+   git clone https://github.com/Tariq-Monowar/social-media-typescript-with-express.js-api.git
+2. Install dependencies:
+    ```bash
+    cd social-media-backend
+    npm install
+3. Set up environment variables:
+   ```bash
+   PORT=1010
+   DBURL= Mongodb url
+   WEBTOKEN_SECRET_KEY=****************
+   NODE_MAILER_USER=***********************
+   NODE_MAILER_PASSWORD=*********************
+   SESSION_SECRET=****************
+   CLOUD_NAME=***************
+   CLOUD_API_KEY=*******************
+   CLOUD_API_SECRET=*************************
+
 # Folder Structure
 ```
 ├── config/
