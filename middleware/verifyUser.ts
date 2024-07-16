@@ -14,28 +14,26 @@ export const verifyUser = async (
   res: Response,
   next: NextFunction
 ): Promise<void> => {
-  const token = req.headers.authorization;
+
+  const { token } = req.cookies;
+  const JWT_SECRET = process.env.WEBTOKEN_SECRET_KEY as string
+
   if (!token) {
     res.status(400).json({
       message: "Unauthorized user",
     });
     return;
   }
+
   try {
-    const decodedToken = verify(
-      token,
-      process.env.WEBTOKEN_SECRET_KEY as string
-    ) as { userEmail: string; userId: string };
+    const decodedToken = verify(token,JWT_SECRET) as { userEmail: string; userId: string };
+
     req.userEmail = decodedToken.userEmail;
     req.userId = decodedToken.userId;
     next();
+
   } catch (error) {
-    console.error(error);
-    res.status(401).json({
-      message: "Invalid token",
-    });
+    res.status(401).json({message: "Invalid token"});
     return;
   }
 };
-
-
